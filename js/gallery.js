@@ -89,7 +89,7 @@ refs.galleryList.insertAdjacentHTML('beforeend', galleryItem);
 
 refs.galleryList.addEventListener('click', function (e) {
   e.preventDefault();
-  if (e.target === e.currentTarget) {
+  if (e.target.nodeName !== 'IMG') {
     return;
   }
 
